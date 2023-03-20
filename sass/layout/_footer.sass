@@ -1,0 +1,26 @@
+.footer
+  background: #333333
+  padding: 8rem 0 8rem 0
+  &__logo
+    width: 12rem
+  &__list
+    list-style: none
+    text-align: center
+  &__item
+    display: inline-block
+    &:not(:last-child)
+        margin-right: 5rem
+        
+  &__link
+    &:link, &:visited
+        color: white
+        text-decoration: none
+        letter-spacing: .2rem
+        display: inline-block
+        transition: .2s all
+    &:active
+    &:hover
+        transform: rotate(5deg) scale(1.2)
+        color: #fd8f27
+        filter: $shadow-h2
+        
