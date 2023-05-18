@@ -13,25 +13,41 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__toggle" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__backgroung"></div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#secondsection" class="navigation__link">о нас</a></li>
+                    <li class="navigation__item"><a href="#foursection" class="navigation__link">скидки</a></li>
+                    <li class="navigation__item"><a href="#foursection" class="navigation__link">лучшие туры</a></li>
+                    <li class="navigation__item"><a href="#foursection" class="navigation__link">калькулятор цены</a></li>
+                    <li class="navigation__item"><a href="#fifthsection" class="navigation__link">связаться с нами</a></li>
+                </ul>
+            </nav>
+        </div> 
+
         <!--first section-->
-        <header class="header">
+        <header id="firstsection" class="header">
             <img class="header_logo" src="img/Icon-logo.svg" alt="logo">
             <div class="header_box">
                 <h1 class="header_title">
                     <span class="header_title_span1">ТУРЫ НА ВОЗДУШНОМ ШАРЕ</span>
                     <span class="header_title_span2">незабываемое приключение ждёт вас</span>
                 </h1>
-                <a class="btn btn_animated" href="#">
+                <a class="btn btn_animated" href="#thirdsection">
                     НАШ КАТАЛОГ
                 </a>
             </div>
-        </header>
-    </div>  
-    <div class="container">
+        </header> 
         <main>
 
             <!--second section-->
-            <section class="section-about container">
+            <section id="secondsection" class="section-about container">
                 <h2 class="title-secondary">
                     НЕВЕРОЯТНОЕ ОЩУЩЕНИЕ СВОБОДЫ
                 </h2>
@@ -52,7 +68,7 @@
                             Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрениям и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.
                         </p>
 
-                        <a href="#" class="btm-text">Узнать больше &rarr;</a>
+                        <a href="#secondsection" class="btm-text">Узнать больше &rarr;</a>
 
                     </div>
 
@@ -67,7 +83,7 @@
             </section>
 
             <!--third section-->
-            <section class="section-adventure container">   
+            <section id="thirdsection" class="section-adventure container">   
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="adventure-card">
@@ -101,7 +117,7 @@
             </section>
 
             <!--four section-->
-            <section class="section-tour padding-top-80px">
+            <section id="foursection" class="section-tour padding-top-80px">
                     <h2 class="title-secondary margin-bottom-80px">
                         НАИБОЛЕЕ ПОПУЛЯРНЫЕ ТУРЫ
                     </h2>
@@ -129,7 +145,7 @@
                                     <div class="card-tour__bacSide-box">
                                         <p class="card-tour__text-1">ПОЛНАЯ СТОИМОСТЬ:</p>
                                         <p class="card-tour__text-2">5990₽</p>
-                                        <a class="btn2 btn2_animated" href="#">
+                                        <a class="btn2 btn2_animated" href="#fifthsection">
                                             ЗАБРОНИРОВАТЬ
                                         </a>
                                     </div>
@@ -159,7 +175,7 @@
                                     <div class="card-tour__bacSide-box">
                                         <p class="card-tour__text-1">ПОЛНАЯ СТОИМОСТЬ:</p>
                                         <p class="card-tour__text-2">5990₽</p>
-                                        <a class="btn2 btn2_animated" href="#">
+                                        <a class="btn2 btn2_animated" href="#fifthsection">
                                             ЗАБРОНИРОВАТЬ
                                         </a>
                                     </div>
@@ -189,7 +205,7 @@
                                     <div class="card-tour__bacSide-box">
                                         <p class="card-tour__text-1">ПОЛНАЯ СТОИМОСТЬ:</p>
                                         <p class="card-tour__text-2">5990₽</p>
-                                        <a class="btn2 btn2_animated" href="#">
+                                        <a class="btn2 btn2_animated" href="#fifthsection">
                                             ЗАБРОНИРОВАТЬ
                                         </a>
                                     </div>
@@ -198,15 +214,15 @@
                         </div>
                     </div>
                 <div class="text-align-center">
-                    <a class="btn2 btn2_animated" href="#">
+                    <a class="btn2 btn2_animated" href="#fifthsection">
                         ЗАБРОНИРОВАТЬ
                     </a>
                 </div>
                         
             </section>
 
-            <!--Four section-->
-            <section class="section-feedback">
+            <!--feedback section-->
+            <section id="feedbacksection" class="section-feedback">
                 
                 <div class="bg-gradient"></div>
                 <video class="bg-video" autoplay muted loop>
@@ -247,14 +263,14 @@
                     </div>
                 </div>
                 <div class="text-align-center">
-                    <a class="btn2 btn2_animated btn3" href="#">
+                    <a class="btn2 btn2_animated btn3" href="#fifthsection">
                         ЗАБРОНИРОВАТЬ
                     </a>
                 </div>
             </section>
 
             <!--fifth-section-->
-            <section class="section-form">
+            <section id="fifthsection" class="section-form">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -283,7 +299,7 @@
                                     </div>
                                 </div>
                                 <div class="form__group3">
-                                    <button class="btn4 btn4_animated" href="#">
+                                    <button class="btn4 btn4_animated" href="#fifthsection">
                                     ЗАБРОНИРОВАТЬ
                                     </button>
                                 </div>
@@ -293,6 +309,7 @@
                 </div>
             </section>
         </main>
+        <!--footer-->
         <footer class="footer">
                 <div class="row text-align-center">
                     <a href="#">
@@ -302,23 +319,24 @@
                 <div class="row">
                     <ul class="footer__list">
                         <li class="footer__item">
-                            <a href="#" class="footer__link">О НАС</a>
+                            <a href="#secondsection" class="footer__link">О НАС</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__link">СКИДКИ</a>
+                            <a href="#foursection" class="footer__link">СКИДКИ</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__link">ЛУЧШИЕ ТУРЫ</a>
+                            <a href="#foursection" class="footer__link">ЛУЧШИЕ ТУРЫ</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__link">КАЛЬКУЛЯТОР ЦЕНЫ</a>
+                            <a href="#foursection" class="footer__link">КАЛЬКУЛЯТОР ЦЕНЫ</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__link">СВЯЗАТЬСЯ С НАМИ</a>
+                            <a href="#fifthsection" class="footer__link">СВЯЗАТЬСЯ С НАМИ</a>
                         </li>
                     </ul>
                 </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
