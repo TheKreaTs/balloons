@@ -52,6 +52,9 @@
   &:hover
     transform: skewY(2deg) skewX(15deg) scale(1.1)
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45))
+    @include respond(tab-port)
+      transform: skewY(0) skewX(0) scale(1)
+      filter: none
   &_white
     color: white
 

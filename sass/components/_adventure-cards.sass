@@ -10,6 +10,8 @@
         width: 100%
     &:hover
         transform: translateY(-1.8rem) scale(1.02)
+        @include respond(tab-port)
+            transform: translateY(0) scale(1)
     &__icon
         font-size: 6rem
         background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba($color-orange, 0.7) 99.94%)
