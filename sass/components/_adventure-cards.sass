@@ -6,6 +6,8 @@
     text-align: center
     transition: .3s all
     width: 25rem
+    @include respond(phone)
+        width: 100%
     &:hover
         transform: translateY(-1.8rem) scale(1.02)
     &__icon
@@ -14,4 +16,6 @@
         -webkit-background-clip: text
         color: transparent 
         display: inline-block
+        @include respond(phone)
+            font-size: 9rem
         

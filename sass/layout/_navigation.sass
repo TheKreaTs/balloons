@@ -13,6 +13,11 @@
         text-align: center
         box-shadow: 0px 0px 15px 2px rgba(34, 60, 80, 0.2)
         cursor: pointer
+        @include respond(phone)
+            height: 11rem
+            width: 11rem
+            top: 13rem
+            right: 13rem
     &__backgroung
         width: 6.8rem
         height: 6.8rem
@@ -24,6 +29,9 @@
         z-index: 100
         transition: all 1.5s
         opacity: .8
+        @include respond(phone)
+            top: 15rem
+            right: 15rem
     &__nav
         height: 100vh
         width: 0
@@ -57,27 +65,33 @@
             transition: all .65s
             display: inline-block
             padding: 1rem 2rem
+            @include respond(phone)
+                font-size: 5.5rem
         &:hover, &:active
             background-position: 100%
             color: $color-orange
             transform: translateX(1rem)
     
     &__toggle:checked ~ &__backgroung
-        transform: scale(90)
+        transform: scale(125)
     &__toggle:checked ~ &__nav
         width: 100%
         opacity: 1
         
     &__icon
         position: relative
-        margin-top: 34px
+        margin-top: 3.4rem
+        @include respond(phone)
+            margin-top: 5.4rem
         &,
         &::before,
         &::after
-            width: 30px
-            height: 2px
+            width: 3rem
+            height: .2rem
             background: $color-black
             display: inline-block
+            @include respond(phone)
+                width: 5rem
         &::before,
         &::after
             content: ""
@@ -85,13 +99,13 @@
             left: 0
             transition: all .2s
         &::before
-            top: -10px
+            top: -1rem
         &::after
-            top: 10px
+            top: 1rem
     &__button:hover &__icon::before
-        top: -12px
+        top: -1.2rem
     &__button:hover &__icon::after
-        top: 12px
+        top: 1.2rem
         
     &__toggle:checked + &__button &__icon
         background: transparent

@@ -15,6 +15,8 @@
     animation-timing-function: ease
     backface-visibility: hidden
     animation-fill-mode: backwards
+    @include respond(phone)
+      font-size: 6rem
   &_span2
     display: block
     font-size: 4rem
@@ -28,6 +30,13 @@
     backface-visibility: hidden
     margin-bottom: 6.5rem
     animation-fill-mode: backwards
+    @include respond(phone)
+      font-size: 3rem
+
+.br-header
+  display: none
+  @include respond(phone)
+    display: block
 
 .title-secondary
   font-size: $font-size-paragraph-h2
@@ -50,7 +59,6 @@
   font-size: $font-size-paragraph-h2
   letter-spacing: 1rem
   font-weight: 800
-  //text-align: center
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba($color-orange, 0.7) 99.94%)
   -webkit-background-clip: text
   color: $color-gray
@@ -58,24 +66,32 @@
   backface-visibility: hidden
   margin-bottom: 3rem
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4))
-  //&:hover
-    //transform: skewY(2deg) skewX(15deg) scale(1.1)
-    //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45))
+  @include respond(phone)
+    font-size: 3.8rem
+    color: white
   &_white
     color: white
 
 .title-third
-  font-size: $font-size-paragraph-h3
+  font-size: 2rem
   letter-spacing: .2rem
   text-transform: uppercase
   font-weight: 700
+  @include respond(phone)
+    font-size: 2.9rem
 
 .paragraph
   font-size: $font-size-paragraph
   letter-spacing: .2rem
   line-height: 140%
   font-weight: 400
+  @include respond(phone)
+    font-size: 2.5rem
 
 .section-adventure__title
   font-weight: 500
-  font-size: 20px
+  font-size: 19px
+  @include respond(tab-port)
+    font-size: 12px
+  @include respond(phone)
+    font-size: 13.5px

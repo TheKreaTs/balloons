@@ -5,10 +5,12 @@
     border-radius: .5rem
     overflow: hidden
     padding: 5rem
-
+    @include respond(phone)
+        background: url('../img/bg-form.jpg') no-repeat top center / cover
+        padding: 5rem 0 5rem 3rem
 .form
     &__group:not(:last-child)
-        margin-bottom: 3rem
+        margin-bottom: 2rem
     &__group2
         margin-bottom: 4rem
     &__input
@@ -22,11 +24,18 @@
         border-bottom: .3rem solid transparent
         border-radius: .3rem
         width: 35.5rem
+        @include respond(phone)
+            font-size: 3rem
+            width: 42rem
         &:focus
             outline: none
             border-bottom: .3rem solid #66D763
+            @include respond(phone)
+                border-bottom: .6rem solid #66D763
         &:focus:invalid
             border-bottom: .3rem solid #D76363
+            @include respond(phone)
+                border-bottom: .6rem solid #D76363
         
     &__label
         font-size: $font-size-paragraph
@@ -75,4 +84,57 @@
             opacity: 0
             transition: .1s all
     &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
+
+.row-killer-ficha
+    margin-bottom: 0 !important
+    @include respond(phone)
+        display: none
+
+.book-two
+    display: none
+    height: auto
+    @include respond(phone)
+        display: block
+
+.form
+    &__group-radio2
+        width: auto
+        display: flex
+        flex-direction: column
+        &:not(:last-child)
+            margin-bottom: 4rem
+
+    &__input-radio2
+        display: none
+
+    &__label-radio2
+        cursor: pointer
+        position: relative
+        padding: 0.5rem 0 0 6rem
+        color: white
+        font-size: 3rem
+    &__button-radio2
+        height: 5rem
+        width: 5rem
+        border-radius: 50%
+        border: .5rem solid white
+        display: block
+        position: absolute
+        left: 0
+        top: -.45rem
+        &::after
+            content: ""
+            display: block 
+            height: 2.5rem
+            width: 2.5rem
+            border-radius: 50%
+            background: white
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .1s all
+    &__input-radio2:checked ~ &__label-radio2 &__button-radio2::after
         opacity: 1

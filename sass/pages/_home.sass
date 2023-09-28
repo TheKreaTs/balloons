@@ -1,12 +1,15 @@
 .section-about
   padding-top: 8rem
+  @include respond(phone)
+    height: 145rem
 
 .section-adventure
   background-color: #F7F7F7
-  padding: 21rem 0
+  padding: 21rem 0 21rem 0
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/section-adventure.jpg") center / cover no-repeat
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%)
-  
+  @include respond(phone)
+    padding: 36rem 0 30rem 0
 .section-tour
   padding-bottom: 8.5rem
 
@@ -18,3 +21,6 @@
 .section-form
   padding: 10rem
   background: linear-gradient(90deg, $color-brown, $color-orange)
+  @include respond(phone)
+    padding: 8rem 4rem 8rem 4rem
+                

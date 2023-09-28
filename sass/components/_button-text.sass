@@ -10,6 +10,8 @@
     border-bottom: 1px $color-orange solid
     display: inline-block
     transition: .5s all
+    @include respond(phone)
+      font-size: 3.4rem
   &:hover
     background-color: $color-orange
     color: white
