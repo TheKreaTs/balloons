@@ -1,0 +1,62 @@
+.feedback-card
+    width: 95rem
+    height: 26.7rem
+    background: rgba(white, 0.85)
+    box-shadow: $box-shadow
+    margin: 0 auto
+    padding: 5rem 0 0 12rem
+    transform: skewX(150deg)
+    position: relative
+    @include respond(phone)
+        width: 72%
+        transform: skewX(170deg)
+        padding: 4rem 4rem 4rem 4rem
+        height: auto
+    & > *
+        transform: skewX(-150deg)
+        @include respond(phone)
+            transform: skewX(-170deg)
+    &__img
+        width: 17rem
+        height: 17rem
+        background: white-gray 
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%)
+        -webkid-shape-outside: circle(50% at 50% 50%)
+        margin-right: 5rem
+        overflow: hidden
+        img
+            width: 100%
+            transform: scale(1.1)
+            transition: .4s all
+            @include respond(phone)
+                margin-bottom: 2rem
+                margin-right: 2rem           
+    &__name
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -10%)
+        opacity: 0
+        text-align: center
+        font-size: 2.4rem
+        color: white
+        letter-spacing: .2rem
+        font-weight: 400      
+    &:hover &__name
+        transform: translate(-50%, -50%)
+        opacity: 1
+        transition: .4s all
+    &:hover img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(65%)
+        
+.feedback-card-killer-ficha
+    display: none
+    @include respond(phone)
+        display: block
+    &__one
+        margin-bottom: 10rem
+    &__two
+        margin-bottom: 10rem
